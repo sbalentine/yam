@@ -24,7 +24,7 @@ require 'date'
 
 Gem::Specification.new do |s|
   s.name             = 'yam'
-  s.version          = Yammer::Version
+  s.version          = Yammer::Version.to_s
 
   s.date             = Date.today.to_s
   s.summary          = "Yammer API Client"
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   s.authors          = ["Kevin Mutyaba"]
   s.email            = %q{kmutyaba@yammer-inc.com}
   s.homepage         = 'http://yammer.github.io/yam'
-  s.rubygems_version = Yammer::Version
+  s.rubygems_version = Yammer::Version.to_s
   s.files            = `git ls-files`.split("\n")
   s.require_paths    = ['lib']
 
@@ -43,9 +43,9 @@ Gem::Specification.new do |s|
   s.cert_chain       = ['certs/public.pem']
   s.signing_key      = File.expand_path("~/.gem/certs/private_key.pem") if $0 =~ /gem\z/
 
-  s.add_dependency 'oj', '~> 2.14'
+  s.add_dependency 'oj', '~> 3.16'
   s.add_dependency 'multi_json', '~> 1.8'
-  s.add_dependency 'rest-client', '~> 2.0.2'
+  s.add_dependency 'rest-client', '~> 2.1'
   s.add_dependency 'addressable', '~> 2.4'
   s.add_dependency 'oauth2-client', '~> 2.0'
 
